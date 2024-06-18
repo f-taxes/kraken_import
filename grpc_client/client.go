@@ -92,3 +92,8 @@ func (c *FTaxesClient) AppLog(ctx context.Context, msg *proto.AppLogMsg, opts ..
 	_, err := c.GrpcClient.AppLog(ctx, msg)
 	return err
 }
+
+func (c *FTaxesClient) PluginHeartbeat(ctx context.Context) error {
+	_, err := c.GrpcClient.PluginHeartbeat(ctx, &proto.PluginInfo{ID: global.Plugin.ID, Version: global.Plugin.Version, HasCtlServer: global.Plugin.Ctl.Address != ""})
+	return err
+}

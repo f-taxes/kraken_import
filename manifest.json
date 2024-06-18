@@ -16,10 +16,10 @@
     "darwin": "https://github.com/f-taxes/kraken_import/releases/download/1.0.0/kraken_import-darwin.zip"
   },
   "ctl": {
-    "address": "127.0.0.1:40011"
+    "address": "127.0.0.1:4104"
   },
   "web": {
-    "address": "127.0.0.1:40010",
+    "address": "127.0.0.1:4105",
     "configPage": "/config"
   }
 }

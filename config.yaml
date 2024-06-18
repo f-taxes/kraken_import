@@ -2,9 +2,9 @@ accounts:
 - id: 66041a69104ebad40bc9f80c
   label: Kraken
   notes: Private Account
-  key: JxjzGG0KfU2sMTTbtDVBvOXpeyoT9alwKnEs2OVcQuIPgDbgpYM7gdx4
-  secret: NYTTEaKfssMc40SREyC5A0ncbQAQLO4iiDlhbxUaja5qb0X9eusSUpE+7wajYNXDe1Mc0iqiuYwOcJ1dWXDRNw==
-  lastFetched: 2024-03-29T22:05:30.0433639Z
+  key: e2TArzOCMpe6ab6PJGEYBEplsNiv9pf6ekNexzKG7XCkVbWbByq78XeO
+  secret: NneYqef4ZwMmvjLo7Mn9z7QsSXJX4qrjkcDM+HX14CPovRwcKS0hJgEZUowvxf+gQv9Mk8nVTtfsCuO84X9GRA==
+  lastFetched: 2024-06-17T23:36:26.491399953Z
 debug: true
 embedded: false
 

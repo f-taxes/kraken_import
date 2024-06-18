@@ -4,13 +4,13 @@ go 1.22.0
 
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.33.0-20240221180331-f05a6f4403ce.1
-	github.com/aopoltorzhicky/go_kraken v0.2.1
-	github.com/beldur/kraken-go-api-client v0.0.0-20240207163059-7469c489f802
+	github.com/dgraph-io/badger/v4 v4.2.0
 	github.com/gookit/config/v2 v2.2.5
 	github.com/kataras/golog v0.1.11
 	github.com/kataras/iris/v12 v12.2.10
 	github.com/shopspring/decimal v1.3.1
 	go.mongodb.org/mongo-driver v1.14.0
+	go.uber.org/ratelimit v0.3.1
 	google.golang.org/grpc v1.62.0
 	google.golang.org/protobuf v1.33.0
 )
@@ -25,14 +25,21 @@ require (
 	github.com/andybalholm/brotli v1.1.0 // indirect
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/benbjohnson/clock v1.3.0 // indirect
+	github.com/cespare/xxhash/v2 v2.2.0 // indirect
+	github.com/dgraph-io/ristretto v0.1.1 // indirect
+	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/fatih/color v1.15.0 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/flosch/pongo2/v4 v4.0.2 // indirect
 	github.com/go-playground/validator/v10 v10.17.0 // indirect
 	github.com/goccy/go-yaml v1.11.2 // indirect
+	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/golang/glog v1.2.0 // indirect
+	github.com/golang/groupcache v0.0.0-20190702054246-869f871628b6 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/gomarkdown/markdown v0.0.0-20231222211730-1d6d20845b47 // indirect
+	github.com/google/flatbuffers v1.12.1 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/gookit/color v1.5.4 // indirect
 	github.com/gookit/goutil v0.6.15 // indirect
@@ -62,7 +69,7 @@ require (
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	github.com/yosssi/ace v0.0.5 // indirect
-	go.uber.org/ratelimit v0.3.1 // indirect
+	go.opencensus.io v0.22.5 // indirect
 	golang.org/x/crypto v0.18.0 // indirect
 	golang.org/x/exp v0.0.0-20240112132812-db7319d0e0e3 // indirect
 	golang.org/x/net v0.20.0 // indirect

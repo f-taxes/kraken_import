@@ -1,7 +1,9 @@
 package global
 
 import (
-	krakenapi "github.com/beldur/kraken-go-api-client"
+	"sort"
+
+	"github.com/f-taxes/kraken_import/krakenapi"
 )
 
 type Account struct {
@@ -15,12 +17,32 @@ type Account struct {
 	LastFetched string `mapstructure:"lastFetched" json:"lastFetched"`
 }
 
+type LedgerRecList []LedgerRec
+
+func (e LedgerRecList) Sort() {
+	sort.Slice(e, func(i, j int) bool {
+		return e[i].Time < e[j].Time
+	})
+}
+
 type LedgerRec struct {
-	krakenapi.LedgerInfo
+	LedgerInfoDoc
 	ID string
 }
 
 type TradeRec struct {
 	krakenapi.TradeHistoryInfo
-	ID string
+	LedgerRecs LedgerRecList
+	ID         string
+}
+
+type LedgerInfoDoc struct {
+	RefID   string  `json:"refid"`
+	Time    float64 `json:"time"`
+	Type    string  `json:"type"`
+	Aclass  string  `json:"aclass"`
+	Asset   string  `json:"asset"`
+	Amount  string  `json:"amount"`
+	Fee     string  `json:"fee"`
+	Balance string  `json:"balance"`
 }

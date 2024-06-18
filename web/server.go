@@ -133,7 +133,8 @@ func Start(address string, webAssets embed.FS) {
 
 	app.Post("/account/fetch/one", func(ctx iris.Context) {
 		reqData := struct {
-			ID string `json:"id"`
+			ID    string    `json:"id"`
+			Since time.Time `json:"since"`
 		}{}
 
 		if !iu.ReadJSON(ctx, &reqData) {
@@ -172,7 +173,7 @@ func Start(address string, webAssets embed.FS) {
 		newFetch := time.Now().UTC()
 		lastFetched, _ := time.Parse(time.RFC3339Nano, acc.LastFetched)
 
-		err = fetcher.Ledger(lastFetched)
+		ledgerRecs, err := fetcher.Ledger(lastFetched)
 		if err != nil {
 			golog.Error(err)
 			ctx.JSON(iu.Resp{
@@ -181,7 +182,8 @@ func Start(address string, webAssets embed.FS) {
 			return
 		}
 
-		err = fetcher.Trades(lastFetched)
+		err = fetcher.Trades(lastFetched, ledgerRecs)
+		// err = fetcher.Trades(lastFetched, []g.LedgerRec{})
 		if err != nil {
 			golog.Error(err)
 			ctx.JSON(iu.Resp{
